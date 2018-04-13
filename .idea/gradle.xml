@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/appjiuzhidao" />
+            <option value="$PROJECT_DIR$/appjiuzhidao/jiuzhidao-demo" />
+            <option value="$PROJECT_DIR$/appjiuzhidao/jiuzhidaoapp" />
+            <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/biz" />
+            <option value="$PROJECT_DIR$/biz-libs" />
+            <option value="$PROJECT_DIR$/biz/biz-demo1" />
+            <option value="$PROJECT_DIR$/commonlibs" />
+            <option value="$PROJECT_DIR$/commonlibs/libglide37" />
+            <option value="$PROJECT_DIR$/commonlibs/libglin" />
+            <option value="$PROJECT_DIR$/commonlibs/libmvp" />
+            <option value="$PROJECT_DIR$/commonlibs/libretrofit" />
+            <option value="$PROJECT_DIR$/commonlibs/libutils" />
+            <option value="$PROJECT_DIR$/commonlibs/libvariants" />
+            <option value="$PROJECT_DIR$/commonlibs/libwebview" />
+            <option value="$PROJECT_DIR$/libsCenter" />
+            <option value="$PROJECT_DIR$/otherlibs" />
+            <option value="$PROJECT_DIR$/otherlibs/jiaozivideoplayer" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,42 @@
+include ':app'
+
+// start aar
+
+include ':libsCenter', ':biz-libs'
+
+//end aar
+
+// start other libs
+
+include ':otherlibs',
+        ':otherlibs:jiaozivideoplayer'
+
+//end other libs
+
+// start commonlibs
+
+include ':baselibrary'
+
+include ':commonlibs',
+        ':commonlibs:libglin',
+        ':commonlibs:libglide37',
+        ':commonlibs:libutils',
+        ':commonlibs:libretrofit',
+        ':commonlibs:libvariants',
+        ':commonlibs:libwebview',
+        ':commonlibs:libmvp'
+
+// end commonlibs
+
+// start biz
+include ':biz',
+        ':biz:biz-demo1'
+// end biz
+
+//appjiuzhidao start
+
+ include ':appjiuzhidao',
+         ':appjiuzhidao:jiuzhidaoapp',
+         ':appjiuzhidao:jiuzhidao-demo'
+
+//appjiuzhidao end

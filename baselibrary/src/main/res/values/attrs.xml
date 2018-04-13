@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EmptyView">
+        <attr name="loading_layout_img_an" format="integer|reference" />
+        <attr name="loading_layout" format="reference" />
+        <attr name="nodata_layout" format="reference" />
+        <attr name="errornet_layout" format="reference" />
+        <attr name="unreachable_layout" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IndexPagerIndicator">
+        <attr name="indicator_width" format="dimension|reference" />
+        <attr name="indicator_height" format="dimension|reference" />
+        <attr name="indicator_interval" format="dimension|reference" />
+        <attr name="indicator_item_color" format="color|reference" />
+        <attr name="indicator_select_color" format="color|reference" />
+        <attr name="indicator_select_height" format="dimension|reference" />
+        <attr name="indicator_style_drawer" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BannerView">
+        <attr name="indicator_position" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <attr name="indicator_visible" format="boolean" />
+        <attr name="scroll_time" format="integer|reference" />
+        <attr name="auto_start" format="boolean|reference" />
+
+        <attr name="indicator_normal_color" format="color|reference" />
+        <attr name="indicator_current_color" format="color|reference" />
+
+        <attr name="indicator_current_style" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="large" value="1" />
+        </attr>
+
+        <attr name="indicator_current_size" format="integer|reference" />
+        <attr name="indicator_circle_radius" format="integer|reference" />
+        <attr name="indicator_padding" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SmartBar">
+        <attr name="home_icon" format="reference" />
+        <attr name="back_icon" format="reference" />
+        <attr name="icon_padding" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LXBannerView">
+        <attr name="open_mz_mode" format="boolean"/>
+        <attr name="outside_bottom" format="boolean"/>
+        <attr name="canLoop" format="boolean"/>
+        <attr name="indicatorPaddingLeft" format="dimension"/>
+        <attr name="indicatorPaddingRight" format="dimension"/>
+        <attr name="indicatorPaddingTop" format="dimension"/>
+        <attr name="indicatorPaddingBottom" format="dimension"/>
+        <attr name="indicatorAlign">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="middle_page_cover" format="boolean"/>
+    </declare-styleable>
+</resources>
