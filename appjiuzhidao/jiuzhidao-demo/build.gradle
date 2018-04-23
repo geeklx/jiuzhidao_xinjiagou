@@ -46,5 +46,5 @@ dependencies {
     implementation librarys.okhttpVersion
     //jar
 
-    /**rep*/implementation (name:'biz-demo1_bxnt_nation', ext:'aar')
+    /**rep*/implementation (name:'biz-demo1_bxn_nation', ext:'aar')
 }

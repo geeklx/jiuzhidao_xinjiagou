@@ -1,4 +1,4 @@
-package com.haier.cellarette.baselibrary.bannerview;
+package com.haier.cellarette.baselibrary.bannerview.banner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,10 +15,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
+
 import com.haier.cellarette.baselibrary.R;
 
 import java.lang.ref.WeakReference;
 
+/**
+ * banner view
+ */
 public class BannerView extends FrameLayout {
     private static final int MSG_RUN = 1;
 
@@ -140,21 +144,32 @@ public class BannerView extends FrameLayout {
         return p instanceof LayoutParams;
     }
 
+    public int pos = 0;
     private OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
             int relCount = mAdapter.getRealCount();
+
             if (relCount <= 0) {
+                pos = 0;
                 mIndicator.current(0);
             } else {
+                pos = position % relCount;
                 mIndicator.current(position % relCount);
+            }
+            //
+            if (mOnBannerChangeListener != null) {
+                mOnBannerChangeListener.onPageSelected(pos);
             }
         }
 
         @Override
         public void onPageScrolled(int arg0, float arg1, int arg2) {
-
+            //
+            if (mOnBannerChangeListener != null) {
+                mOnBannerChangeListener.onPageScrolled(pos);
+            }
         }
 
         @Override
@@ -165,8 +180,31 @@ public class BannerView extends FrameLayout {
                 Message msg = mHandler.obtainMessage(MSG_RUN, isScrolling ? 1 : 0, isTouch ? 1 : 0);
                 mHandler.sendMessageDelayed(msg, mScrollTime);
             }
+            //
+            if (mOnBannerChangeListener != null) {
+                mOnBannerChangeListener.onPageScrollStateChanged(pos);
+            }
         }
     };
+
+    public interface OnBannerChangeListener {
+        void onPageSelected(int pos);
+
+        void onPageScrolled(int pos);
+
+        void onPageScrollStateChanged(int pos);
+
+    }
+
+    public OnBannerChangeListener mOnBannerChangeListener;
+
+    public OnBannerChangeListener getmOnBannerChangeListener() {
+        return mOnBannerChangeListener;
+    }
+
+    public void setmOnBannerChangeListener(OnBannerChangeListener mOnBannerChangeListener) {
+        this.mOnBannerChangeListener = mOnBannerChangeListener;
+    }
 
     /**
      * 开始自动滚动

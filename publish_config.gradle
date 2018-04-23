@@ -1,9 +1,9 @@
 ext {
 
-    defaultVariantIndex = 0
+    defaultVariantIndex = 2
     // 测试，预生产，线上
     variants = ['BXNT_101_NATION','BXNY_101_NATION','BXN_101_NATION']
-    apps = ['app','appjiuzhidao']
+    apps = [/*'app',*/'appjiuzhidao']
 
     variantMapping = { variant ->
         def arr = variant.split "_"

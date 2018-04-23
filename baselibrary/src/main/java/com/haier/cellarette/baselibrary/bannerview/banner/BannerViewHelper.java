@@ -1,4 +1,4 @@
-package com.haier.cellarette.baselibrary.bannerview;
+package com.haier.cellarette.baselibrary.bannerview.banner;
 
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.MotionEvent;
